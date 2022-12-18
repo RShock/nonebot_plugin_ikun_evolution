@@ -12,7 +12,7 @@ authors = [
 repository = "https://github.com/RShock/nonebot_plugin_ikun_evolution"
 
 # README file(s) are used as the package description
-readme = ["README.md"]
+readme = "readme.md"
 
 # Keywords (translated to tags on the package index)
 keywords = []
@@ -22,7 +22,4 @@ python = ">=3.9,<4.0"
 gino = "^1.0.1"
 json5 = "^0.9.10"
 lagom = "^2.2.0"
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^2.20.0"
 
