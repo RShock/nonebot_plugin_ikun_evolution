@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nonebot-plugin-ikun-evolution"
+version = "1.0.0"
+description = "移植自真寻的q群小游戏"
+
+license = "MIT"
+
+authors = [
+    "小r <418648118@qq.com>"
+]
+
+repository = "https://github.com/RShock/nonebot_plugin_ikun_evolution"
+
+# README file(s) are used as the package description
+readme = ["README.md"]
+
+# Keywords (translated to tags on the package index)
+keywords = []
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+gino = "^1.0.1"
+json5 = "^0.9.10"
+lagom = "^2.2.0"
