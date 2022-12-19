@@ -86,7 +86,9 @@ async def _(state: T_State, event: GroupMessageEvent, arg: Message = CommandArg(
     player = await get_player(event)
     if not player:
         await set_out.finish("你还没有账号，请先输入'加入只因进化录'创建账号！")
-    await set_out.send(await player_handler.auto_sign(player))
+    result = await player_handler.auto_sign(player)
+    if result:
+        await set_out.send(result)
 
     msg = arg.extract_plain_text().strip()
     item, tmp = await get_usable_item(event)
@@ -141,7 +143,9 @@ async def handle_go_home(bot: Bot, event: GroupMessageEvent, state: T_State):
     if not player:
         await go_home.finish("你还没有账号，请先输入'加入只因进化录'创建账号！")
 
-    await go_home.send(await player_handler.auto_sign(player))
+    result = await player_handler.auto_sign(player)
+    if result:
+        await set_out.send(result)
     log, flg = await adv_time_pass(event)
     state["player_name"] = player.name
     log_str = [("探索简报", s) for s in log.split("🔚")]
