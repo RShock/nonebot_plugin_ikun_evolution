@@ -13,6 +13,10 @@ pip install nonebot_plugin_ikun_evolution
 nonebot.load_plugin('nonebot_plugin_ikun_evolution')
 ```
 
+或者直接下载拖到插件文件夹里。
+
+你的python版本应当大于3.9。
+
 ### 数据库配置
 
 你需要安装一个[postgresql数据库](https://hibikier.github.io/zhenxun_bot/docs/installation_doc/install_postgresql.html)才能进行游戏
@@ -31,10 +35,17 @@ psql = "postgresql://uname:zhenxun@127.0.0.1:5432/testdb"
 
 ## 已知问题
 
-pip install的话，初始运行报找不到json文件夹错误
+在初次运行时，无法正确加载资源。
 
-去相应目录下创建json文件夹（我明天修一下，pypi把我的空文件夹删了...）(应该修好了）
-
-第一次运行没有成功加载配置文件，需要第二次运行才可以
-
-谜，明天我也修一下
+只需要再运行一次bot，看见
+```
+nonebot_plugin_ikun_evolution | 【只因进化录】资源载入中
+nonebot_plugin_ikun_evolution | 【只因进化录】任务载入完成，共9个任务
+nonebot_plugin_ikun_evolution | 【只因进化录】制作表载入完成，共1个配方
+nonebot_plugin_ikun_evolution | 【只因进化录】地图载入完成，共42张地图
+nonebot_plugin_ikun_evolution | 【只因进化录】帮助载入完成，共11条帮助
+nonebot_plugin_ikun_evolution | 【只因进化录】技能载入完成，共38个技能
+nonebot_plugin_ikun_evolution | 【只因进化录】敌人载入完成，共30个敌人
+nonebot_plugin_ikun_evolution | 【只因进化录】物品载入完成，共7个物品
+```
+即为载入完成
