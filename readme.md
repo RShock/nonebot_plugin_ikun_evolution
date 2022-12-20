@@ -17,6 +17,8 @@ nonebot.load_plugin('nonebot_plugin_ikun_evolution')
 
 你的python版本应当大于3.9。
 
+你的gocqhttp最好为rc3以上，否则可能存在组消息发送为空的情况。
+
 ### 数据库配置
 
 你需要安装一个[postgresql数据库](https://hibikier.github.io/zhenxun_bot/docs/installation_doc/install_postgresql.html)才能进行游戏
