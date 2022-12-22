@@ -4,6 +4,18 @@
 
 ## 安装
 
+### 前置条件
+
+* python版本应当大于3.9
+* gocqhttp为rc3以上，否则可能存在组消息发送为空的情况
+* 没有使用`SQLAlchemy1.4`的插件，如[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)。以及其他可能使用了数据库的插件。这个问题正在尝试解决。
+如果存在，运行时会出现以下错误
+```
+module 'sqlalchemy.sql.schema' has no attribute '_schema_getter'
+```
+并且`poetry install`无法成功。
+具体可以在`poetry.lock`文件里搜索`sqlalchemy`观看是否有插件在使用1.4版本。
+
 ### 插件安装
 ```
 pip install nonebot_plugin_ikun_evolution
@@ -14,10 +26,6 @@ nonebot.load_plugin('nonebot_plugin_ikun_evolution')
 ```
 
 或者直接下载拖到插件文件夹里。
-
-你的python版本应当大于3.9。
-
-你的gocqhttp最好为rc3以上，否则可能存在组消息发送为空的情况。
 
 ### 数据库配置
 
