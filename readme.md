@@ -8,13 +8,14 @@
 
 * python版本应当大于3.9
 * gocqhttp为rc3以上，否则可能存在组消息发送为空的情况
-* 没有使用`SQLAlchemy1.4`的插件，如[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)。以及其他可能使用了数据库的插件。这个问题正在尝试解决。
+* 没有使用`SQLAlchemy1.4`的插件，如[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)。以及其他使用数据库的插件也可能导致问题。
 如果存在，运行时会出现以下错误
 ```
 module 'sqlalchemy.sql.schema' has no attribute '_schema_getter'
 ```
 并且`poetry install`无法成功。
 具体可以在`poetry.lock`文件里搜索`sqlalchemy`观看是否有插件在使用1.4版本。
+这个问题影响范围很大。根本冲突是真寻在使用sqlalchemy1.3（gino）但是nonebot普遍使用1.4，导致我只能选一边，没有解决方案。仅剩方案是同时开多个bot。
 
 ### 插件安装
 ```
