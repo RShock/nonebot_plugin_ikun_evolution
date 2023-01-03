@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-ikun-evolution"
-version = "1.0.11"
+version = "1.0.12"
 description = "移植自真寻的q群小游戏"
 
 license = "MIT"
